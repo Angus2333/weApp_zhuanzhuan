@@ -55,7 +55,7 @@ page, view, text, swiper, swiper-item, image, navigator {
     text-align: center;
     padding: 30rpx 0;
     font-size: 35rpx;
-    color:black;
+    /* color:black; */
 }
 .wrap-content{
     background-color: #fff;
