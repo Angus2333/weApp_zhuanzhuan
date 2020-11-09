@@ -1,1 +1,117 @@
+<!-- 获取收货地址 -->
+<view class="receive-address">
+    <view class="address-button"  wx:if="{{!address.userName}}">
+        <button plain type="warn" bindtap="handleAddress">获取收货地址</button>
+    </view>
+    <view wx:else  class="user_info_row" >
+        <view class="user_info">
+          <view>收货人:{{address.userName}}</view>
+          <view>{{address.provinceName + address.cityName + address.countyName + address.detailInfo}}</view>
+        </view>
+        <view class="user_phone">{{address.telNumber}}</view>
+    </view>    
+</view>
+<!-- 购物车 -->
+<view class="shopcar-content">
+    <view class="carcontent-top">
+        <!-- <checkbox-group>
+            <checkbox></checkbox>
+          </checkbox-group> -->
+          <label class="radio">
+            <radio value="r2" />
+          </label>
+          <view class="shopcar-title">转转优质货源</view>
+    </view>
+    <view class="carcontent-bottom">
+        <view class="carcontent-item">
+            <view class="checkbox_wrap">
+                <checkbox-group  bindchange="handeItemChange">
+                  <checkbox></checkbox>
+                </checkbox-group>
+              </view>
+              <navigator class="image_wrap">
+                  <image  src="https://img.alicdn.com/imgextra/i3/2616970884/O1CN01lfOACy1IOukzA4pVr_!!2616970884.jpg_430x430q90.jpg" mode="widthFix"/>      
+              </navigator>
+              <view class="info-wrap">
+                  <view class="goods-name">99新 苹果iphone11 256G 红色 </view>
+                  <view class="goods-select">移动4G 联通4G 电信4G</view>
+                  <view class="goods-price-wrap">
+                      <view class="goods-price">
+                          <text>￥</text>999.00</view>
+                      <view class="goods-num-wrap">
+                          <view class="num-edit">-</view>
+                          <view class="goods-num">2</view>
+                          <view class="num-edit">+</view>
+                      </view>
+                  </view>
+              </view>
+        </view>
+        <view class="carcontent-item">
+            <view class="checkbox_wrap">
+                <checkbox-group  bindchange="handeItemChange">
+                  <checkbox></checkbox>
+                </checkbox-group>
+              </view>
+              <navigator class="image_wrap">
+                  <image  src="https://img.alicdn.com/imgextra/i3/2616970884/O1CN01lfOACy1IOukzA4pVr_!!2616970884.jpg_430x430q90.jpg" mode="widthFix"/>      
+              </navigator>
+              <view class="info-wrap">
+                  <view class="goods-name">99新 苹果iphone11 256G 红色 </view>
+                  <view class="goods-select">移动4G 联通4G 电信4G</view>
+                  <view class="goods-price-wrap">
+                      <view class="goods-price">
+                          <text>￥</text>999.00</view>
+                      <view class="goods-num-wrap">
+                          <view class="num-edit">-</view>
+                          <view class="goods-num">2</view>
+                          <view class="num-edit">+</view>
+                      </view>
+                  </view>
+              </view>
+        </view>
+        <view class="carcontent-item">
+          <view class="checkbox_wrap">
+              <checkbox-group  bindchange="handeItemChange">
+                <checkbox></checkbox>
+              </checkbox-group>
+            </view>
+            <navigator class="image_wrap">
+                <image  src="https://img.alicdn.com/imgextra/i3/2616970884/O1CN01lfOACy1IOukzA4pVr_!!2616970884.jpg_430x430q90.jpg" mode="widthFix"/>      
+            </navigator>
+            <view class="info-wrap">
+                <view class="goods-name">99新 苹果iphone11 256G 红色 五彩斑斓黑  </view>
+                <view class="goods-select">移动4G 联通4G 电信4G</view>
+                <view class="goods-price-wrap">
+                    <view class="goods-price">
+                        <text>￥</text>999.00</view>
+                    <view class="goods-num-wrap">
+                        <view class="num-edit">-</view>
+                        <view class="goods-num">2</view>
+                        <view class="num-edit">+</view>
+                    </view>
+                </view>
+            </view>
+      </view>
+    </view>
+</view>
 
+<!-- 底部工具栏 -->
+<view class="footer_tool">
+    <!-- 全选 -->
+    <view class="all_chk_wrap">
+        <label class="radio">
+            <radio value="r2" />全选
+          </label>
+    </view>
+    <!-- 总价格 -->
+    <view class="total_price_wrap">
+      <view class="total_price">
+        合计: <text class="total_price_text">￥0</text>
+      </view>
+      <view>包含运费</view>
+    </view>
+    <!-- 结算 -->
+    <view class="order_pay_wrap"  >
+      结算
+    </view>
+  </view>
